@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Analyze Data</title>
+</head>
+<body>
+    <h1>Total Plastic Usage</h1>
+    <ul>
+        {% for community, usage in total_usage.items() %}
+        <li>{{ community }}: {{ usage }} kg</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>

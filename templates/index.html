@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Plastic Usage Tracker</title>
+</head>
+<body>
+    <h1>Plastic Usage Tracker</h1>
+    <form action="/add" method="POST">
+        <label for="community">Community:</label>
+        <input type="text" id="community" name="community" required><br><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="plastic_used_kg">Plastic Used (kg):</label>
+        <input type="number" id="plastic_used_kg" name="plastic_used_kg" required><br><br>
+        <button type="submit">Add Data</button>
+    </form>
+    <br>
+    <a href="/analyze">Analyze Data</a> | <a href="/plot">View Trends</a>
+</body>
+</html>

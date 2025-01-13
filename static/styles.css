@@ -1,0 +1,145 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #0078d7;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    animation: slide-in 1s ease-out;
+}
+
+h1 {
+    color: #0078d7;
+    margin: 1rem 0;
+    animation: fade-in 1s ease-in-out;
+}
+
+form {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 50%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: zoom-in 0.8s ease-in-out;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+}
+
+form input, form button {
+    width: calc(100% - 2rem);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+    border-color: #0078d7;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+form button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+a {
+    color: #0078d7;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #005bb5;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #eef;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    width: 50%;
+    border-radius: 4px;
+    animation: fade-in-up 0.8s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
