@@ -1,145 +1,220 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/* Futuristic Font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #333;
+    height: 100vh;
+    justify-content: flex-start;
+    background: url('https://cdn.create.vista.com/api/media/medium/180450776/stock-photo-flat-lay-arranged-different-types-garbage-recycle-sign-isolated-grey?token=') no-repeat center center fixed; /* Set your image URL here */
+    background-size: cover;
 }
 
-header {
-    background-color: #0078d7;
+/* Blur effect for background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    filter: blur(0px); /* Apply blur to the background */
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Navigation Bar Styling */
+nav {
+    width: 100%;
+    background-color:transparent /* Semi-transparent background for navbar */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
     color: white;
-    padding: 1rem;
-    text-align: center;
-    animation: slide-in 1s ease-out;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover {
+    background-color: #005f74;
+}
+
+/* Adjust content margin for navbar */
 h1 {
-    color: #0078d7;
-    margin: 1rem 0;
-    animation: fade-in 1s ease-in-out;
+    color: #ffffff;
+    margin-top: 80px; /* Adjust for the navbar height */
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
+/* Form Styling */
 form {
-    margin: 2rem auto;
-    padding: 1rem;
-    width: 50%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    animation: zoom-in 0.8s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent form background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
 }
 
 form label {
-    display: block;
-    margin: 0.5rem 0 0.2rem;
-    font-weight: bold;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #555;
 }
 
-form input, form button {
-    width: calc(100% - 2rem);
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: all 0.3s ease-in-out;
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
 }
 
 form input:focus {
-    border-color: #0078d7;
-    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+    border-color: #008cba;
+    outline: none;
 }
 
-form button {
-    background-color: #0078d7;
-    color: white;
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #008cba;
+    color: #fff;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #005bb5;
-    transform: scale(1.05);
+button:hover {
+    background-color: #005f74;
 }
 
+/* Links Styling */
 a {
-    color: #0078d7;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    color: #008cba;
+    font-weight: bold;
+    margin: 5px;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #005bb5;
+    color: #005f74;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+/* General Styles */
+body {
+    font-family:'Times New Roman';
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
 }
 
 .container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 80px; /* Space for navbar or header */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 2rem;
 }
 
-ul {
-    list-style: none;
+h1 {
+    color: #008cba;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+.usage-list ul {
+    list-style-type: none;
     padding: 0;
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
 }
 
-ul li {
-    background-color: #eef;
-    margin: 0.5rem auto;
-    padding: 0.5rem;
-    width: 50%;
-    border-radius: 4px;
-    animation: fade-in-up 0.8s ease-in-out;
+.usage-list li {
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 1rem 0;
-    animation: fade-in 1s ease-in-out;
+.usage-list li strong {
+    color: #008cba;
 }
 
-/* Animations */
-@keyframes slide-in {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Back Link */
+.back-link {
+    margin-top: 30px;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.back-link a {
+    text-decoration: none;
+    color: #008cba;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-@keyframes zoom-in {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+.back-link a:hover {
+    color: #005f74;
 }
 
-@keyframes fade-in-up {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}

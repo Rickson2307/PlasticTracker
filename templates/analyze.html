@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <title>Analyze Data</title>
 </head>
 <body>
-    <h1>Total Plastic Usage</h1>
-    <ul>
-        {% for community, usage in total_usage.items() %}
-        <li>{{ community }}: {{ usage }} kg</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Go Back</a>
+    <div class="container">
+        <h1>Total Plastic Usage</h1>
+        
+        <div class="usage-list">
+            <ul>
+                {% for community, usage in total_usage.items() %}
+                    <li><strong>{{ community }}:</strong> {{ usage }} kg</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="back-link">
+            <a href="/">Go Back</a>
+        </div>
+    </div>
 </body>
 </html>

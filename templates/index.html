@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Link to Google Fonts for a futuristic font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <title>Plastic Usage Tracker</title>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Add Data</a></li>
+            <li><a href="/analyze">Analyze Data</a></li>
+            <li><a href="/plot">View Trends</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <h1>Plastic Usage Tracker</h1>
     <form action="/add" method="POST">
         <label for="community">Community:</label>
